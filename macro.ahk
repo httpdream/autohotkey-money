@@ -13,8 +13,8 @@ _list := Array()
 _list.Insert({"email": "**", "password": "**"})
 _list.Insert({"email": "**", "password": "**"})
 
-Loop, 5 {
-	Loop, % _list.Length() {
+Loop, % _list.Length() {
+	Loop, 5 {
 		Send, % _list[A_Index].email
 		Send {TAB}
 		Send, % _list[A_Index].password
@@ -75,8 +75,9 @@ Loop, 5 {
 			break
 			}
 		}
-
 		Send {Enter}
+
+		;곧 바뀜~
 		Sleep,10000
 		Click 41, 383
 		Sleep,1000
@@ -100,20 +101,21 @@ Loop, 5 {
 		Sleep,300
 		Send {Space}
 		Sleep,300
-		Send {ESC}
-		Sleep,500
-		Send {ESC}
-		Sleep 300
-		Send {Up}
-		Sleep,300
-		Send {Enter}
-		Sleep,5000
-		Send {ESC}
-		Sleep,1000
-		Send {ESC}
-		Sleep,1000
-		Send {Enter}
-		Sleep,2000
+
+		Sleep,1800000 ;18분
 	}
+	Send {ESC}
+	Sleep,500
+	Send {ESC}
+	Sleep 300
+	Send {Up}
+	Sleep,300
+	Send {Enter}
+	Sleep,5000
+	Send {ESC}
+	Sleep,1000
+	Send {ESC}
+	Sleep,1000
+	Send {Enter}
 	Sleep,10000
 }
